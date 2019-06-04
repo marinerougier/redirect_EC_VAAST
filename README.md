@@ -1,1 +1,1 @@
-# redirect_EC_VAAST
+# ECVAAST_RC

@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>exp</title>
+    <script src="jspsych-6.0.3/jspsych.js"></script>
+</head>
+
+<body></body>
+
+<script>
+
+
+// getting the Prolific ID
+var PROLIFIC_PID = jsPsych.data.getURLVariable("PROLIFIC_PID");
+if(PROLIFIC_PID == null) {PROLIFIC_PID = "999";}
+
+
+// Link of the two cond
+var VAAST = "https://marinerougier.github.io/VAAST_1appui/index.html?PROLIFIC_PID=" + PROLIFIC_PID;
+var EC = "https://marinerougier.github.io/EC/evacond-1.html?PROLIFIC_PID=" + PROLIFIC_PID;
+
+//random
+var condition = jsPsych.randomization.sampleWithoutReplacement([VAAST, EC], 1);
+
+window.location.href = condition;
+
+
+</script>
+
+</html>
+
+
+
